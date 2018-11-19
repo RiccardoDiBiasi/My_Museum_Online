@@ -1,0 +1,86 @@
+
+
+
+.navbar {
+    position: sitcky;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* menu allineato a sinistra con bordino di 1px tra un elemento e un altro */
+
+
+/* ultimo elemento del menu senza bordo */
+.navbar :last-child{
+    border-right: none;
+}
+
+/* elementi del menu */
+.navbar a {
+    border-right: 1px solid #bbb;
+    float:left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* colore di sfondo degli elementi sotto il mouse */
+.navbar a:hover {
+    background-color: #111;
+}
+
+/* colore di sfondo dell'elemento della pagina corrente */
+.active {
+    background-color: green;
+}
+
+
+.navbar .searchbar {
+    float:right;
+}
+
+.navbar input[type=text] {
+     padding: 6px;
+     border: none;
+     margin-top: 8px;
+     font-size: 17px;
+}
+
+.navbar .searchbar button {
+    float:right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #bbb;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .searchbar button:hover {
+    background: #ccc;
+}
+
+
+
+/***** FOOTER *****/
+#sotto {
+    font-size: 14px;
+    padding: 14px 16px;
+    clear: both;
+    background: #333;
+    color: #e3dfe2;
+}
+
+#sotto a {
+    color: #e3dfe2;
+}
+
+/****** FINE FOOTER ******/
