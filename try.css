@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #500;
 }
 
 /* menu allineato a sinistra con bordino di 1px tra un elemento e un altro */
@@ -33,12 +33,12 @@
 
 /* colore di sfondo degli elementi sotto il mouse */
 .navbar a:hover {
-    background-color: #111;
+    background-color: #900;
 }
 
 /* colore di sfondo dell'elemento della pagina corrente */
 .active {
-    background-color: green;
+    background-color: #900;
 }
 
 
