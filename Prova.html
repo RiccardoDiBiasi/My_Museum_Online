@@ -5,6 +5,7 @@
         <meta charset = "UTF-8">
         <link rel="stylesheet" href="try.css">
         <script type="text/javascript" language="JavaScript" src="topbutton.js"></script>
+        <script language="JavaScript" href="search.js"></script>
     </head>
         <body>
             <button onclick="topFunction()" id="topButton" title="Torna su">Torna su</button>
@@ -16,7 +17,7 @@
                 <a href="#chi"><i class="fa fa-fw fa-user"></i>Chi Siamo</a>
                 <div class="searchbar">
                     <input type="text" placeholder="Cerca.." name="search"> 
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button onclick="return trovaInPagina(this.string.value);"><i class="fa fa-search"></i></button>
                 </div>
             </div>
             <!-- Fine codice navbar -->
