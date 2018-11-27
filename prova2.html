@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>My Museum Online</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="try2.css">
         <script type="text/javascript" language="JavaScript" src="topbutton.js"></script>
@@ -26,7 +26,7 @@
         <section class="sec1">
             <h1 class="ml2">MY MUSEUM ONLINE</h1>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-            <script>// Wrap every letter in a span
+            <script>
                 $('.ml2').each(function(){
                   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
                 });
@@ -43,8 +43,9 @@
                       return 70*i;
                     }
                   });
-                </script>
+            </script>
             <span id="text" style="white-space: pre-line"></span>       
+            <button class="button"><span>Registrati </span></button>
 
         
         </section>

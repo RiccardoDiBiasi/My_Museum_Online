@@ -8,8 +8,6 @@ function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   }
-
-  
 }
 
 window.onload = function() {
