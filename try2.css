@@ -84,6 +84,8 @@ section.sec1 {
     margin: 5px;
     position: absolute;
   }
+
+ 
   
   .button span {
     cursor: pointer;
@@ -109,6 +111,50 @@ section.sec1 {
     opacity: 1;
     right: 0;
   }
+
+   .button2 {
+    top: 60%;
+    right: 45%;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+  }
+
+  .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button2:hover span {
+    padding-right: 25px;
+  }
+  
+  .button2:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
 .sec2 h1 {
     text-align: center;
     font-size: 35px;
@@ -160,6 +206,8 @@ nav ul li a {
     transition: .5s;
 }
 
+
+
 nav ul li a:hover {
     color: #262626;
 
@@ -184,35 +232,7 @@ nav ul li a:hover:before {
     transform: scaleX(1);
 }
 
-/* Style the input container */
-nav .login-container {
-  float: right;
-}
 
-/* Style the input field inside the navbar */
-nav input[type=text] {
-  padding: 12px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width: 200px; /* adjust as needed (as long as it doesn't break the topnav) */
-}
-/* Style the button inside the input container */
-nav .login-container button {
-  float: right;
-  padding: 13px;
-  margin-top: 8px;
-  margin-right: 0px;
-  margin-left: 12px;
-  background: #transparent;
-  font-size: 15px;
-  border: 5px;
-  cursor: pointer;
-}
-
-nav .login-container button:hover {
-  background: #ccc;
-}
 
 
 
@@ -282,7 +302,6 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* Set a style for all buttons */
 
 
 /* Extra styles for the cancel button */
@@ -317,7 +336,7 @@ input[type=text]:focus, input[type=password]:focus {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.6);
   padding-top: 50px;
 }
 
@@ -358,9 +377,26 @@ hr {
   display: table;
 }
 
+
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
 }
