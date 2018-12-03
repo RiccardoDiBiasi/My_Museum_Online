@@ -33,26 +33,22 @@ section.sec1 {
     font-weight: bold;
     color: white;
     position: absolute;
+    
 }
 
+section.sec2 {
+	 width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: url('parquet.jpg');
+    background-size: cover;
+}
 
 /* terza sezione, chi siamo */
 .sec3 p{
     width: 500px;
     margin: 25px;
 }
-
-
-
-/*.centered {
-    top: 20%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: white;
-    font-weight: bold;
-}*/
 
 /* scritta my museum online */ 
 .ml2 {
