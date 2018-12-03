@@ -75,9 +75,10 @@ section.sec1 {
     top: 50%;
     right: 45%;
     border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
+    background-color: transparent;
+    border-style: solid;
+    border-color: orange;
+    color: orange;
     text-align: center;
     font-size: 28px;
     padding: 20px;
@@ -119,8 +120,9 @@ section.sec1 {
     top: 60%;
     right: 45%;
     border-radius: 4px;
-    background-color: green;
-    border: none;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
     color: #FFFFFF;
     text-align: center;
     font-size: 28px;
