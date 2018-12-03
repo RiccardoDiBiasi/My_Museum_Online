@@ -12,4 +12,5 @@ function typeWriter() {
 
 window.onload = function() {
     typeWriter();
+    initStorage();
   };

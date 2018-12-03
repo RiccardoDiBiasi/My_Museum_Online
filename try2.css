@@ -22,7 +22,7 @@ section.sec1 {
     background: url('bg.jpg');
     background-size: cover;
 }
-
+/* testo che appare da solo */
 #text { 
     height: 2em;
     white-space: nowrap;
@@ -35,6 +35,8 @@ section.sec1 {
     position: absolute;
 }
 
+
+/* terza sezione, chi siamo */
 .sec3 p{
     width: 500px;
     margin: 25px;
@@ -52,6 +54,7 @@ section.sec1 {
     font-weight: bold;
 }*/
 
+/* scritta my museum online */ 
 .ml2 {
     font-weight: 900;
     font-size: 80px;
@@ -68,7 +71,7 @@ section.sec1 {
     line-height: 1em;
   }
 
-  .button {
+.button {
     top: 50%;
     right: 45%;
     border-radius: 4px;
@@ -116,7 +119,7 @@ section.sec1 {
     top: 60%;
     right: 45%;
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: green;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -286,8 +289,8 @@ nav ul li a:hover:before {
     color: rgba(0,0,0,0.6);
 }
 
-/* Full-width input fields */
-  input[type=text], input[type=password] {
+
+  input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -296,7 +299,7 @@ nav ul li a:hover:before {
   background: #f1f1f1;
 }
 
-/* Add a background color when the inputs get focus */
+
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
@@ -304,7 +307,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 
-/* Extra styles for the cancel button */
+
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
@@ -315,46 +318,46 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: green;
 }
 
-/* Float cancel and signup buttons and add an equal width */
+
 .cancelbtn, .signup {
   float: left;
   width: 50%;
 }
 
-/* Add padding to container elements */
+
 .container {
   padding: 16px;
 }
 
-/* The Modal (background) */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
   background-color: rgba(0,0,0,0.6);
   padding-top: 50px;
 }
 
-/* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto; 
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 50%; 
 }
 
-/* Style the horizontal ruler */
+
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
-/* The Close Button (x) */
+
 .close {
   position: absolute;
   right: 35px;
@@ -370,21 +373,13 @@ hr {
   cursor: pointer;
 }
 
-/* Clear floats */
+
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
-}
 
 .animate {
   -webkit-animation: animatezoom 0.6s;

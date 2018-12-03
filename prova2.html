@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
-        <meta charset="utf-8">
-        <title>My Museum Online</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="try2.css">
-        <script type="text/javascript" language="JavaScript" src="topbutton.js"></script>
-        <script src="scritta.js"></script>
-        <script src="scritta2.js"></script>
-        
-    </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <body>
-        <button onclick="topFunction()" id="topButton" title="Torna su">Torna su</button>
-        <nav>
-            <ul>
-                <li><a href="prova2.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
-                <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-                
-            </ul>			
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <title>My Museum Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="try2.css">
+  <script type="text/javascript" language="JavaScript" src="topbutton.js"></script>
+  <script src="scritta.js"></script>
+  <script src="signUp.js"></script>
+  <script src="logIn.js"></script>
 
-        <section class="sec1">
-            <h1 class="ml2">MY MUSEUM ONLINE</h1>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-            <script>
-                $('.ml2').each(function(){
+</head>
+
+<body>
+  <button onclick="topFunction()" id="topButton" title="Torna su">Torna su</button>
+  <nav>
+    <ul>
+      <li><a href="#sec1"><i class="fa fa-fw fa-home"></i>Home</a></li>
+      <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
+      <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
+
+    </ul>
+  </nav>
+
+  <section class="sec1">
+    <h1 class="ml2">MY MUSEUM ONLINE</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      $('.ml2').each(function(){
                   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
                 });
                 
@@ -45,114 +47,116 @@
                     }
                   });
             </script>
-            <span id="text" style="white-space: pre-line"></span>       
-            <button class="button" onclick="document.getElementById('id01').style.display='block'"><span>Registrati </span></button>
-            <button class="button2" onclick="document.getElementById('id02').style.display='block'"><span>Log In</span></button>
+    <span id="text" style="white-space: pre-line"></span>
+    <button class="button" onclick="document.getElementById('registrazione').style.display='block'"><span>Registrati </span></button>
+    <button class="button2" onclick="document.getElementById('login').style.display='block'"><span>Log In</span></button>
 
-            <div id="id02" class="modal">
-              <span onclick="document.getElementById('id02').style.display='none'"
-            class="close" title="Close Modal">&times;</span>
-            
-              <!-- Login modal -->
-              <form class="modal-content animate" onsubmit="return store(this);" action="">
-            
-                <div class="container">
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
-            
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-            
-                  <button type="submit">Login</button>
-                  <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                  </label>
-                </div>
-            
-                <div class="container" style="background-color:#f1f1f1">
-                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-                  
-                </div>
-              </form>
-            </div>            
+    <div id="login" class="modal">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-<!-- form di Signup-->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-  <form class="modal-content"  action="">
-    <div class="container">
-      <h1>Registrazione</h1>
-      <p>Riempi questa form per registrarti al sito.</p>
-      <hr>
-      <form method="get" action="" onsubmit="return store(this);" id="register"></form>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Inserisci Email" name="email"  required value="" />
+      <!-- Login modal -->
+      <form class="modal-content animate" onsubmit="return login(this);" action="">
 
-      <label for="usrname"><b>Username</b></label>
-      <input type="text" placeholder="Inserisci Username" name="usrname" id="username"  required value="" />
+        <div class="container">
+          <h1>Log In</h1>
+          <p>Inserisci username e password per accedere al museo.</p>
+          <hr>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="inputUsername" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="password" required value="" />
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="inputPass" required>
 
-      <label for="psw-repeat"><b>Ripeti Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required value="">
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
 
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
 
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signup" value="register">Sign Up</button>
+        </div>
       </form>
+    </div>
+
+    <!-- form di Signup-->
+    <div id="registrazione" class="modal">
+      <span onclick="document.getElementById('registrazione').style.display='none'" class="close" title="Close Modal">X</span>
+      <form class="modal-content" method="get" action="" name="formsignup" id="register" onSubmit="return signup();">
+        <div class="container">
+          <h1>Registrazione</h1>
+          <p>Riempi questa form per registrarti al sito.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input class="form-control" id="email" type="email" placeholder="Inserisci Email" name="Email"  value="" required autofocus />
+
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Inserisci Username" name="inputUsername" id="username"  value="" required />
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="inputPass" id="password"  value="" minlength="8" required />
+
+          <label for="psw-repeat"><b>Ripeti Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="ripetiPass" value="" onChange="return checkPass();" required />
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('registrazione').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signup">Sign Up</button>
+    
+          
+          </div>
+    </div>
+    </form>
+    </div>
+
+  </section>
+  <section class="sec2" id="mappa">
+    <h1>MAPPA</h1>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+    <p>AAA</p>
+  </section>
+
+  <section class="sec3" id="chisiamo">
+    <h1>CHI SIAMO</h1>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="images.jpeg" alt="Riccardo">
+          <div class="container">
+            <h2>Riccardo Di Biasi</h2>
+            <p class="title">CEO &amp; Founder</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>dibiasi.1694305@studenti.uniroma1.it</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="images.jpeg" alt="Guido">
+          <div class="container">
+            <h2>Guido della Rocca</h2>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>dellarocca.1711308@studenti.uniroma1.it</p>
+          </div>
+        </div>
       </div>
     </div>
-  </form>
-</div>
-        
-        </section>
-        <section class="sec2" id="mappa">
-            <h1>MAPPA</h1>
+  </section>
+</body>
 
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-            <p>AAA</p>
-        </section>
-
-        <section class="sec3" id="chisiamo">
-            <h1>CHI SIAMO</h1>
-            <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <img src="images.jpeg" alt="Riccardo">
-                    <div class="container">
-                      <h2>Riccardo Di Biasi</h2>
-                      <p class="title">CEO &amp; Founder</p>
-                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                      <p>dibiasi.1694305@studenti.uniroma1.it</p>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="column">
-                  <div class="card">
-                    <img src="images.jpeg" alt="Guido">
-                    <div class="container">
-                      <h2>Guido della Rocca</h2>
-                      <p class="title">Art Director</p>
-                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                      <p>dellarocca.1711308@studenti.uniroma1.it</p>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </section>
-    </body>
 </html>
