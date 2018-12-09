@@ -315,10 +315,16 @@ input[type=password]:focus {
   outline: none;
 }
 
+.loginbtn {
+  padding: 14px 200px;
+  background-color: green;
+}
+
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
+
 
 .signup {
   padding: 14px 20px;
