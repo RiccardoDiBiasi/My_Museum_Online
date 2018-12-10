@@ -66,7 +66,7 @@ section.sec2 {
 }
 
 .sec3 {
-  background-color: grey;
+  background-color: black;
 }
 
 .box {
@@ -420,3 +420,74 @@ hr {
 }
 
 /*FINE GESTIONE DEL LOGIN E SIGNUP */
+
+
+
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 160px;
+}
+
+.column2 {
+  float: right;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 160px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 white;
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 30px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: white;
+}
+
+.mldesc {
+  font-size: 2vw;
+  color: white;
+  position: center;
+
+}
+
+.contactbutton {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
