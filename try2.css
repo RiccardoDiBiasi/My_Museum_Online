@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  text-align: center;
+
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -19,6 +19,7 @@ body {
 
 /* prima sezione, barra con sfondo */
 section.sec1 {
+  text-align: center;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -54,6 +55,27 @@ section.sec2 {
   float: center;
 }
 
+.container_mappa {
+  position: relative;
+}
+
+.mappetta {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+
+.in_alto {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+
+
+
 /* terza sezione, chi siamo */
 .sec3 p {
   width: 500px;
@@ -67,20 +89,11 @@ section.sec2 {
 }
 
 .sec3 {
+  text-align: center;
   background-color: lightseagreen;
 }
 
-.box {
-  float: left;
-  width: 50%;
-  display: table;
-}
 
-.div_chi::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 
 /* scritta my museum online */
@@ -235,7 +248,6 @@ nav ul li a {
   text-transform: uppercase;
   transition: .5s;
 }
-
 
 
 nav ul li a:hover {
@@ -426,7 +438,7 @@ hr {
 /*     CHI SIAMO     */
 
 
-/* Three columns side by side */
+
 .column {
   float: left;
   width: 50%;
@@ -441,7 +453,7 @@ hr {
   padding: 200px;
 }
 
-/* Display the columns below each other instead of side by side on small screens */
+
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -449,7 +461,7 @@ hr {
   }
 }
 
-/* Add some shadows to create a card effect */
+
 .card {
   box-shadow: 0 8px 16px 0 black;
   background-color: lightgrey;
@@ -458,12 +470,12 @@ hr {
   
 }
 
-/* Some left and right padding inside the container */
+
 .container {
   padding: 5px;
 }
 
-/* Clear floats */
+
 .container::after, .row::after {
   content: "";
   clear: both;
