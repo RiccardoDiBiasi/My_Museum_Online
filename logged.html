@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="try2.css">
-  <script type="text/javascript" language="JavaScript" src="topbutton.js"></script>
-  <script src="scritta2.js"></script>
-  <script src="signUp.js"></script>
-  <script src="logIn.js"></script>
+  <script src="/js/topbutton.js"></script>
+  <script src="/js/scritta2.js"></script>
+  <script src="/js/signUp.js"></script>
+  <script src="/js/logIn.js"></script>
 
 </head>
 
@@ -22,8 +22,11 @@
       <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-      <li><a style="float: right;">tizio</a></li>
-    </ul>
+      <li><a id="user"><script>document.getElementById("user").innerHTML = sessionStorage.getItem("username")</script></a></li>
+      
+      </ul>
+    
+    
   </nav>
 
   <section class="sec1" id="home">
@@ -48,8 +51,7 @@
                   });
             </script>
     <span id="text" style="white-space: pre-line; font-size: 2vw;"></span>
-    <button class="button" onclick="document.getElementById('registrazione').style.display='block'"><span>Registrati </span></button>
-    <button class="button2" onclick="document.getElementById('login').style.display='block'"><span>Log In</span></button>
+    
 
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -121,12 +123,10 @@
   <section class="sec2" id="mappa">
     <h1 class="titolo">MAPPA</h1>
     <div class="container_mappa">
-    <img src="map.png" class="mappetta">
+    <img src="/img/map.png" class="mappetta">
     <div class="in_alto"><a href="#">STANZA DI GUIDO</a></div>
 </div>
   </section>
-
-  <hr>
 
   <section class="sec3" id="chisiamo">
     <h1 class="titolo">CHI SIAMO</h1>
@@ -134,7 +134,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="hipster.png" alt="Jane" style="width:100%">
+      <img src="/img/hipster.png" alt="Jane" style="width:100%">
       <div class="container">
         <h2 class="mldesc1">Riccardo Di Biasi</h2>
         <p class="title">CEO &amp; Founder</p>
@@ -146,7 +146,7 @@
 
   <div class="column2">
     <div class="card">
-      <img src="man.png" alt="Mike" style="width:100%">
+      <img src="/img/man.png" alt="Mike" style="width:100%">
       <div class="container">
         <h2 class="mldesc2">Guido della Rocca</h2>
         <p class="title">Art Director</p>

@@ -1,5 +1,5 @@
 var i = 0;
-var txt ='Bentornato su My Museum Online! Ora che sei loggato potrai accedere alle varie stanze tramite la mappa e continuare il tuo viaggio all\' interno del nostro museo!';
+var txt ='Bentornato su My Museum Online' + ' ' + sessionStorage.getItem("username") + '! ' + 'Ora che sei loggato potrai accedere alle varie stanze tramite la mappa e continuare il tuo viaggio all\' interno del nostro museo!';
 var speed = 30;
 
 function typeWriter() {
