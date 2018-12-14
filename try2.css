@@ -214,6 +214,7 @@ section.sec2 {
 /* GESTIONE NAVBAR */
 
 nav {
+  z-index: 1000; /* elementi della nav cliccabili in ogni punto, la nav è sopra tutti gli elementi della pagina */
   position: fixed;
   top: 0;
   left: 0;
