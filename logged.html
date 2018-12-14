@@ -8,10 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="try2.css">
-  <script src="/js/topbutton.js"></script>
-  <script src="/js/scritta2.js"></script>
-  <script src="/js/signUp.js"></script>
-  <script src="/js/logIn.js"></script>
+  <script src="js/topbutton.js"></script>
+  <script src="js/scritta2.js"></script>
+  <script src="js/signUp.js"></script>
+  <script src="js/logIn.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Charm|Montserrat" rel="stylesheet"> 
 
 </head>
 
@@ -22,7 +24,7 @@
       <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-      <li><a id="user"><script>document.getElementById("user").innerHTML = sessionStorage.getItem("username")</script></a></li>
+      <a id="user"><script>document.getElementById("user").innerHTML = 'Sei loggato come: ' + sessionStojsage.getItem("usejsname")</script></a>
       
       </ul>
     
@@ -46,76 +48,12 @@
                     easing: "easeOutExpo",
                     duration: 950,
                     delay: function(el, i) {
-                      return 70*i;
+                    return 70*i;
                     }
                   });
             </script>
     <span id="text" style="white-space: pre-line; font-size: 2vw;"></span>
     
-
-    <div id="login" class="modal">
-      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-      <!-- Login modal -->
-      <form id="loginform" class="modal-content animate" onsubmit="return login();" action="">
-
-        <div class="container">
-          <h1>Log In</h1>
-          <p>Inserisci username e password per accedere al museo.</p>
-          <hr>
-          <label for="uname"><b>Username</b></label>
-          <input type="text" id="userlogin" placeholder="Enter Username" name="inputUsername" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" id="passlogin" placeholder="Enter Password" name="inputPass" required>
-
-          
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="submit" class="loginbtn">Login</button>
-
-        </div>
-      </form>
-    </div>
-
-    <!-- form di Signup-->
-    <div id="registrazione" class="modal">
-      <span onclick="document.getElementById('registrazione').style.display='none'" class="close" title="Close Modal">X</span>
-      <form class="modal-content animate" method="get" action="" name="formsignup" id="register" onSubmit="return signup();">
-        <div class="container">
-          <h1>Registrazione</h1>
-          <p>Riempi questa form per registrarti al sito.</p>
-          <hr>
-          <label for="email"><b>Email</b></label>
-          <input class="form-control" id="email" type="email" placeholder="Inserisci Email" name="Email"  value="" required autofocus />
-
-          <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Inserisci Username" name="inputUsername" id="username"  value="" required />
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="inputPass" id="password"  value="" minlength="8" required />
-
-          <label for="psw-repeat"><b>Ripeti Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="ripetiPass" value="" onChange="return checkPass();" required />
-
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
-
-          <div class="clearfix">
-            <button type="button" onclick="document.getElementById('registrazione').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signup">Sign Up</button>
-    
-          
-          </div>
-    </div>
-    </form>
-    </div>
 
 
     <!-- MAPPA -->
@@ -123,7 +61,7 @@
   <section class="sec2" id="mappa">
     <h1 class="titolo">MAPPA</h1>
     <div class="container_mappa">
-    <img src="/img/map.png" class="mappetta">
+    <img src="img/map.png" class="mappetta">
     <div class="in_alto"><a href="#">STANZA DI GUIDO</a></div>
 </div>
   </section>
@@ -134,19 +72,19 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="/img/hipster.png" alt="Jane" style="width:100%">
+      <img src="img/hipster.png" alt="Jane" style="width:100%">
       <div class="container">
         <h2 class="mldesc1">Riccardo Di Biasi</h2>
         <p class="title">CEO &amp; Founder</p>
         <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="title">dibiasi.1111111@studenti.uniroma1.it</p>
+        <p class="title">dibiasi.1694305@studenti.uniroma1.it</p>
       </div>
     </div>
   </div>
 
   <div class="column2">
     <div class="card">
-      <img src="/img/man.png" alt="Mike" style="width:100%">
+      <img src="img/man.png" alt="Mike" style="width:100%">
       <div class="container">
         <h2 class="mldesc2">Guido della Rocca</h2>
         <p class="title">Art Director</p>
