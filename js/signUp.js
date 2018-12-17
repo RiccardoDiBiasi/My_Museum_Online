@@ -11,7 +11,6 @@ function checkPass() {
 function initStorage() {
     if(typeof(localStorage.utenti) == "undefined") {
         localStorage.utenti = "[]";
-        console.log(inizializzato);
     }
     if(typeof(sessionStorage) == undefined) {
         sessionStorage = "[]";
