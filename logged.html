@@ -62,6 +62,14 @@
             <p id="cognome" style="color: white;"><script>document.getElementById("cognome").innerHTML = 'Cognome: ' + sessionStorage.getItem("cognome")</script></p>
             <p id="email" style="color: white;"><script>document.getElementById("email").innerHTML = 'Email: ' + sessionStorage.getItem("email")</script></p>
             <p id="artista" style="color: white;"><script>document.getElementById("artista").innerHTML = 'Artista Preferito: ' + sessionStorage.getItem("artista")</script></p>
+            <p id="token" style="color: white;"><script>
+            if(sessionStorage.getItem("token")== ""){
+              document.getElementById("token").innerHTML = 'Token: Non hai ancora generato un token!';
+            }
+            else {
+               document.getElementById("token").innerHTML = 'Token: ' + sessionStorage.getItem("token");
+            }
+              </script></p>
         
           </div>
         </div>
