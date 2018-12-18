@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
             if($fileSize < 500000){ //Controllo la grandezza del file
                 $fileNameNew = uniqid('', true).".".$fileActualExt; //evito che file con lo stesso nome di altri gia presenti li sovrascrivano
                                                                     //creando un ID basato sul tempo corrente in ms
-                $fileDest = 'img/'.$fileNameNew;
+                $fileDest = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDest);
 		echo "Ho spostato il file stronzo!";
                 header("Location: index.php?uploadsuccess");
