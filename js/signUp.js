@@ -36,7 +36,11 @@ function signup() {
     }
 
     if(checkPass()){
-    var p = {  username:document.getElementById("username").value,
+    var p = {  
+    nome:document.getElementById("nome").value,
+    cognome:document.getElementById("cognome").value,
+    artista:document.getElementById("artista").value,  
+    username:document.getElementById("username").value,
     email:document.getElementById("email").value,
     password:document.getElementById("password").value
 };
@@ -44,6 +48,10 @@ function signup() {
     u[l] = p;
     localStorage.utenti = JSON.stringify(u);
     sessionStorage.setItem("username", p["username"]);
+    sessionStorage.setItem("email", p["email"]);
+    sessionStorage.setItem("nome", p["nome"]);
+    sessionStorage.setItem("cognome", p["cognome"]);
+    sessionStorage.setItem("artista", p["artista"]);
     return true;
 }
     else {

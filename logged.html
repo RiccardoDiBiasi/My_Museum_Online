@@ -24,7 +24,7 @@
       <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-      <li><a id="user"><script>document.getElementById("user").innerHTML = 'Sei loggato come: ' + sessionStorage.getItem("username")</script></a></li>
+      
       
       </ul>
     
@@ -53,6 +53,20 @@
                   });
             </script>
     <span id="text" style="white-space: pre-line; font-size: 2vw;"></span>
+    <div class="row">
+      <div class="column_user">
+        <div class="card">
+            <div class="container_user">
+            <h2 id="user"><script>document.getElementById("user").innerHTML = 'Sei loggato come: ' + sessionStorage.getItem("username")</script></h2>
+            <p id="nome" style="color: white;"><script>document.getElementById("nome").innerHTML = 'Nome: ' + sessionStorage.getItem("nome")</script></p>
+            <p id="cognome" style="color: white;"><script>document.getElementById("cognome").innerHTML = 'Cognome: ' + sessionStorage.getItem("cognome")</script></p>
+            <p id="email" style="color: white;"><script>document.getElementById("email").innerHTML = 'Email: ' + sessionStorage.getItem("email")</script></p>
+            <p id="artista" style="color: white;"><script>document.getElementById("artista").innerHTML = 'Artista Preferito: ' + sessionStorage.getItem("artista")</script></p>
+        
+          </div>
+        </div>
+      </div>
+      </div>
     
 
 
@@ -72,8 +86,8 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="img/hipster.png" alt="Jane" style="width:100%">
-      <div class="container">
+      <img src="img/hipster.png" alt="Riccardo" style="width:100%">
+      <div class="container_card">
         <h2 class="mldesc1">Riccardo Di Biasi</h2>
         <p class="title">CEO &amp; Founder</p>
         <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -84,8 +98,8 @@
 
   <div class="column2">
     <div class="card">
-      <img src="img/man.png" alt="Mike" style="width:100%">
-      <div class="container">
+      <img src="img/man.png" alt="Guido" style="width:100%">
+      <div class="container_card">
         <h2 class="mldesc2">Guido della Rocca</h2>
         <p class="title">Art Director</p>
         <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>

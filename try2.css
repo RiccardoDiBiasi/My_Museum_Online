@@ -27,6 +27,20 @@ section.sec1 {
   background-size: cover;
 }
 
+
+
+.column_user {
+  width: 100%;
+  padding: 500px;
+}
+
+#user {
+  height: 2em;
+  font-size: 35px;
+  color: white;
+}
+
+
 /* testo che appare da solo */
 #text {
   height: 2em;
@@ -480,7 +494,7 @@ hr {
 }
 
 
-.container {
+.container_card {
   padding: 5px;
 }
 

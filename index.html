@@ -23,6 +23,7 @@
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
       
+      
 
     </ul>
   </nav>
@@ -51,22 +52,23 @@
     <span id="text" style="white-space: pre-line; font-size: 2vw;"></span>
     <button class="button" onclick="document.getElementById('registrazione').style.display='block'"><span>Registrati </span></button>
     <button class="button2" onclick="document.getElementById('login').style.display='block'"><span>Log In</span></button>
+    
 
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
 
       <!-- Login modal -->
-      <form id="loginform" class="modal-content animate" onsubmit="return login();" action="logged.html">
+      <form id="loginform" class="modal-content animate" onsubmit="return login();" action="logged.html?loggedin">
 
         <div class="container">
           <h1>Log In</h1>
           <p>Inserisci username e password per accedere al museo.</p>
           <hr>
           <label for="uname"><b>Username</b></label>
-          <input type="text" id="userlogin" placeholder="Enter Username" name="inputUsername" required>
+          <input type="text" id="userlogin" placeholder="Enter Username" name="inputUsername" required autofocus />
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" id="passlogin" placeholder="Enter Password" name="inputPass" required>
+          <input type="password" id="passlogin" placeholder="Enter Password" name="inputPass" required />
 
           
           <label>
@@ -85,13 +87,23 @@
     <!-- form di Signup-->
     <div id="registrazione" class="modal">
       <span onclick="document.getElementById('registrazione').style.display='none'" class="close" title="Close Modal">X</span>
-      <form class="modal-content animate" method="get" action="" name="formsignup" id="register" onSubmit="return signup();">
+      <form class="modal-content animate" method="get" action="logged.html" name="formsignup" id="register" onSubmit="return signup();">
         <div class="container">
           <h1>Registrazione</h1>
           <p>Riempi questa form per registrarti al sito.</p>
           <hr>
+
+          <label for="nome"><b>Nome</b></label>
+          <input type="text" placeholder="Inserisci Nome" name="inputName" id="nome"  value="" required autofocus />
+
+          <label for="cognome"><b>Cognome</b></label>
+          <input type="text" placeholder="Inserisci Cognome" name="inputSurname" id="cognome"  value="" required />
+
+          <label for="prefArtist"><b>Artista Preferito</b></label>
+          <input type="text" placeholder="Inserisci il tuo artista preferito" name="inputArtist" id="artista"  value="" required />
+
           <label for="email"><b>Email</b></label>
-          <input class="form-control" id="email" type="email" placeholder="Inserisci Email" name="Email"  value="" required autofocus />
+          <input class="form-control" id="email" type="email" placeholder="Inserisci Email" name="Email"  value="" required />
 
           <label for="username"><b>Username</b></label>
           <input type="text" placeholder="Inserisci Username" name="inputUsername" id="username"  value="" required />
@@ -101,10 +113,6 @@
 
           <label for="psw-repeat"><b>Ripeti Password</b></label>
           <input type="password" placeholder="Repeat Password" name="ripetiPass" value="" onChange="return checkPass();" required />
-
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
 
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('registrazione').style.display='none'" class="cancelbtn">Cancel</button>
@@ -130,7 +138,7 @@
   <div class="column">
     <div class="card">
       <img src="img/hipster.png" alt="Jane" style="width:100%">
-      <div class="container">
+      <div class="container_card">
         <h2 class="mldesc1">Riccardo Di Biasi</h2>
         <p class="title">CEO &amp; Founder</p>
         <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -142,7 +150,7 @@
   <div class="column2">
     <div class="card">
       <img src="img/man.png" alt="Mike" style="width:100%">
-      <div class="container">
+      <div class="container_card">
         <h2 class="mldesc2">Guido della Rocca</h2>
         <p class="title">Art Director</p>
         <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
