@@ -20,3 +20,15 @@ function login() {
     
     return false;
 }
+
+function log_out(){
+	if(window.confirm("Vuoi disconnetterti?")){
+        sessionStorage.setItem("username", JSON.stringify(null));
+        sessionStorage.setItem("email", JSON.stringify(null));
+        sessionStorage.setItem("nome", JSON.stringify(null));
+        sessionStorage.setItem("cognome", JSON.stringify(null));
+        sessionStorage.setItem("artista", JSON.stringify(null));
+        sessionStorage.setItem("token", JSON.stringify(null));
+		window.location.href = "index.html"
+	}
+}

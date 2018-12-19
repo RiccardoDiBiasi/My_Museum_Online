@@ -1,3 +1,5 @@
+<script src="index.php">
+
 <?php
 
 if(isset($_POST['submit'])) {
@@ -21,8 +23,15 @@ if(isset($_POST['submit'])) {
                                                                     //creando un ID basato sul tempo corrente in ms
                 $fileDest = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDest);
-		echo "Ho spostato il file stronzo!";
-                header("Location: index.php?uploadsuccess");
+                /* APRE L'IMMAGINE A TUTTO SCHERMO DOPO CHE L'HAI CARICATA 
+                
+                header('Content-Type: image/jpeg');
+                readfile($fileDest);
+
+                */
+                
+                
+                
             } else {
                 echo "Il tuo file è troppo grande!";
             }
