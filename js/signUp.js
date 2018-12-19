@@ -42,7 +42,8 @@ function signup() {
     artista:document.getElementById("artista").value,  
     username:document.getElementById("username").value,
     email:document.getElementById("email").value,
-    password:document.getElementById("password").value
+    password:document.getElementById("password").value,
+    token:document.getElementById("token").value,
     
 };
 
@@ -53,7 +54,8 @@ function signup() {
     sessionStorage.setItem("nome", p["nome"]);
     sessionStorage.setItem("cognome", p["cognome"]);
     sessionStorage.setItem("artista", p["artista"]);
-    sessionStorage.setItem("token", "");
+    sessionStorag.setItem("token", p["token"]);
+    
     return true;
 }
     else {
