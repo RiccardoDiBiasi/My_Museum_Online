@@ -19,6 +19,10 @@ function mostra4(){
   document.getElementById("myModal4").style.display = "block";
   document.getElementById("caption").innerHTML = "ciaostreonzo";
 }
+function mostra5(){
+  document.getElementById("myModal5").style.display = "block";
+  document.getElementById("caption").innerHTML = "ciaostreonzo";
+}
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("chiudi")[0];
 
@@ -37,4 +41,8 @@ function sparisci3() {
 
 function sparisci4() { 
   document.getElementById("myModal4").style.display = "none";
+}
+  
+function sparisci5() { 
+  document.getElementById("myModal5").style.display = "none";
 }
