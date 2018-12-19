@@ -15,7 +15,7 @@
   <script src="js/mappa.js"></script>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Charm|Montserrat" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Charm|Montserrat" rel="stylesheet">
 
 </head>
 
@@ -26,58 +26,81 @@
       <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-      
-      
-      </ul>
-    
-    
+
+
+    </ul>
+
+
   </nav>
 
   <section class="sec1" id="home">
     <h1 class="ml2">MY MUSEUM ONLINE</h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-      $('.ml2').each(function(){
-                  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-                });
-                
-                anime.timeline({loop: false})
-                  .add({
-                    targets: '.ml2 .letter',
-                    scale: [4,1],
-                    opacity: [0,1],
-                    translateZ: 0,
-                    easing: "easeOutExpo",
-                    duration: 950,
-                    delay: function(el, i) {
-                    return 70*i;
-                    }
-                  });
-            </script>
+      $('.ml2').each(function () {
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({
+          loop: false
+        })
+        .add({
+          targets: '.ml2 .letter',
+          scale: [4, 1],
+          opacity: [0, 1],
+          translateZ: 0,
+          easing: "easeOutExpo",
+          duration: 950,
+          delay: function (el, i) {
+            return 70 * i;
+          }
+        });
+    </script>
     <span id="text" style="white-space: pre-line; font-size: 2vw;"></span>
     <div class="row">
       <div class="column_user">
         <div class="card">
-            <div class="container_user">
-            <h2 id="user"><script>document.getElementById("user").innerHTML = 'Sei loggato come: ' + sessionStorage.getItem("username")</script></h2>
-            <p id="nome" style="color: white;"><script>document.getElementById("nome").innerHTML = 'Nome: ' + sessionStorage.getItem("nome")</script></p>
-            <p id="cognome" style="color: white;"><script>document.getElementById("cognome").innerHTML = 'Cognome: ' + sessionStorage.getItem("cognome")</script></p>
-            <p id="email" style="color: white;"><script>document.getElementById("email").innerHTML = 'Email: ' + sessionStorage.getItem("email")</script></p>
-            <p id="artista" style="color: white;"><script>document.getElementById("artista").innerHTML = 'Artista Preferito: ' + sessionStorage.getItem("artista")</script></p>
-            <p id="token" style="color: white;"><script>
-            if(sessionStorage.getItem("token")== ""){
-              document.getElementById("token").innerHTML = 'Token: Non hai ancora generato un token!';
-            }
-            else {
-               document.getElementById("token").innerHTML = 'Token: ' + sessionStorage.getItem("token");
-            }
-              </script></p>
-        
+          <div class="container_user">
+            <h2 id="user">
+              <script>
+                document.getElementById("user").innerHTML = 'Sei loggato come: ' + sessionStorage.getItem("username")
+              </script>
+            </h2>
+            <p id="nome" style="color: white;">
+              <script>
+                document.getElementById("nome").innerHTML = 'Nome: ' + sessionStorage.getItem("nome")
+              </script>
+            </p>
+            <p id="cognome" style="color: white;">
+              <script>
+                document.getElementById("cognome").innerHTML = 'Cognome: ' + sessionStorage.getItem("cognome")
+              </script>
+            </p>
+            <p id="email" style="color: white;">
+              <script>
+                document.getElementById("email").innerHTML = 'Email: ' + sessionStorage.getItem("email")
+              </script>
+            </p>
+            <p id="artista" style="color: white;">
+              <script>
+                document.getElementById("artista").innerHTML = 'Artista Preferito: ' + sessionStorage.getItem("artista")
+              </script>
+            </p>
+            <p id="token" style="color: white;">
+              <script>
+                if (sessionStorage.getItem("token") == "") {
+                  document.getElementById("token").innerHTML = 'Token: Non hai ancora generato un token!';
+                } else {
+                  document.getElementById("token").innerHTML = 'Token: ' + sessionStorage.getItem("token");
+                }
+              </script>
+            </p>
+
           </div>
         </div>
       </div>
-      </div>
-    
+    </div>
+
 
 
     <!-- MAPPA -->
@@ -85,66 +108,136 @@
   <section class="sec2" id="mappa">
     <h1 class="titolo">MAPPA</h1>
     <div class="container_mappa">
-		<img src="img/map.png" class="mappetta">
-    
-		<!-- Trigger the Modal -->
-		<img id="myImg" src="img/ercole.png" alt="Snow" onclick="mostra();">
-    
-		<!-- The Modal -->
-		<div id="myModal" class="modale">
+      <img src="img/map.png" class="mappetta">
 
-			<!-- The Close Button -->
-			<span class="chiudi" onclick="sparisci();">&times;</span>
-	
-			<!-- Modal Content (The Image) -->
-			<img class="modale-content" src="img/ercole.png" id="img01">
+      <!-- IMMAGINI STANZE MESSE SULLA MAPPA -->
 
-			<!-- Modal Caption (Image Text) -->
-			<div id="caption"></div>
-		</div>
-    
-		<div class="in_alto"><a href="#">STANZA DI GUIDO</a></div>
-	</div>
+
+      <!-- STANZA DI ERCOLE-->
+
+
+      <div style="position: absolute; top: 10px; left: 1178px;">
+        <img id="myImg" src="img/ercole.png" alt="Snow" onclick="mostra();">
+
+        <!-- MODAL -->
+        <div id="myModal" class="modale">
+
+          <!-- X IN ALTO CHE CHIUDE LA MODAL -->
+          <span class="chiudi" onclick="sparisci();">&times;</span>
+
+          <!-- IMMAGINE CHE SI VEDE NELLA MODAL -->
+          <img class="modale-content" src="img/ercole.png" id="img01">
+
+          <!-- TESTO SOTTO L'IMMAGINE -->
+          <div id="caption"></div>
+        </div>
+      </div>
+
+
+      <!-- STANZA APOLLO E DAFNE-->
+
+
+      <div style="position: absolute; top: 9px; left: 184px;">
+        <img id="myImg" src="img/apollo_dafne.png" alt="Snow" onclick="mostra2();">
+
+        <!-- MODAL -->
+        <div id="myModal2" class="modale">
+
+          <!-- X IN ALTO CHE CHIUDE LA MODAL -->
+          <span class="chiudi" onclick="sparisci2();">&times;</span>
+
+          <!-- IMMAGINE CHE SI VEDE NELLA MODAL -->
+          <img class="modale-content" src="img/apollo_dafne.png" id="img02">
+
+          <!-- TESTO SOTTO L'IMMAGINE -->
+          <div id="caption"></div>
+
+        </div>
+      </div>
+
+
+      <!-- STANZA NARCISO-->
+
+
+      <div style="position: absolute; top:377px; left: 1115px;">
+        <img id="myImg" src="img/narciso.png" alt="Snow" onclick="mostra3();">
+
+        <!-- MODAL -->
+        <div id="myModal3" class="modale">
+
+          <!-- X IN ALTO CHE CHIUDE LA MODAL -->
+          <span class="chiudi" onclick="sparisci3();">&times;</span>
+
+          <!-- IMMAGINE CHE SI VEDE NELLA MODAL -->
+          <img class="modale-content" src="img/narciso.png" id="img03">
+
+          <!-- TESTO SOTTO L'IMMAGINE -->
+          <div id="caption"></div>
+
+        </div>
+      </div>
+
+      <!-- STANZA PROSERPINA-->
+
+      <div style="position: absolute; top:294px; left: 312px;">
+        <img id="myImg" src="img/proserpina.png" alt="Snow" onclick="mostra4();">
+
+        <!-- MODAL -->
+        <div id="myModal4" class="modale">
+
+          <!-- X IN ALTO CHE CHIUDE LA MODAL -->
+          <span class="chiudi" onclick="sparisci4();">&times;</span>
+
+          <!-- IMMAGINE CHE SI VEDE NELLA MODAL -->
+          <img class="modale-content" src="img/proserpina.png" id="img04">
+
+          <!-- TESTO SOTTO L'IMMAGINE -->
+          <div id="caption"></div>
+
+        </div>
+      </div>
+
+    </div>
   </section>
-  
-  
 
 
 
 
-  
-  
-  
+
+
+
+
+
 
   <section class="sec3" id="chisiamo">
     <h1 class="titolo">CHI SIAMO</h1>
-    
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="img/hipster.png" alt="Riccardo" style="width:100%">
-      <div class="container_card">
-        <h2 class="mldesc1">Riccardo Di Biasi</h2>
-        <p class="title">CEO &amp; Founder</p>
-        <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="title">dibiasi.1694305@studenti.uniroma1.it</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="column2">
-    <div class="card">
-      <img src="img/man.png" alt="Guido" style="width:100%">
-      <div class="container_card">
-        <h2 class="mldesc2">Guido della Rocca</h2>
-        <p class="title">Art Director</p>
-        <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="title">dellarocca.1711308@studenti.uniroma1.it</p>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="img/hipster.png" alt="Riccardo" style="width:100%">
+          <div class="container_card">
+            <h2 class="mldesc1">Riccardo Di Biasi</h2>
+            <p class="title">CEO &amp; Founder</p>
+            <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p class="title">dibiasi.1694305@studenti.uniroma1.it</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-</div>
+      <div class="column2">
+        <div class="card">
+          <img src="img/man.png" alt="Guido" style="width:100%">
+          <div class="container_card">
+            <h2 class="mldesc2">Guido della Rocca</h2>
+            <p class="title">Art Director</p>
+            <p class="title">Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p class="title">dellarocca.1711308@studenti.uniroma1.it</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 </body>
 
