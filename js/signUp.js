@@ -43,7 +43,6 @@ function signup() {
     username:document.getElementById("username").value,
     email:document.getElementById("email").value,
     password:document.getElementById("password").value,
-    token:document.getElementById("token").value,
     
 };
 
@@ -54,7 +53,7 @@ function signup() {
     sessionStorage.setItem("nome", p["nome"]);
     sessionStorage.setItem("cognome", p["cognome"]);
     sessionStorage.setItem("artista", p["artista"]);
-    sessionStorag.setItem("token", p["token"]);
+    sessionStorage.setItem("token", p["token"]);
     
     return true;
 }
