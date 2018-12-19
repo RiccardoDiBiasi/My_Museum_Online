@@ -12,6 +12,8 @@
   <script src="js/scritta2.js"></script>
   <script src="js/signUp.js"></script>
   <script src="js/logIn.js"></script>
+  <script src="js/mappa.js"></script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Charm|Montserrat" rel="stylesheet"> 
 
@@ -83,10 +85,36 @@
   <section class="sec2" id="mappa">
     <h1 class="titolo">MAPPA</h1>
     <div class="container_mappa">
-    <img src="img/map.png" class="mappetta">
-    <div class="in_alto"><a href="#">STANZA DI GUIDO</a></div>
-</div>
+		<img src="img/map.png" class="mappetta">
+    
+		<!-- Trigger the Modal -->
+		<img id="myImg" src="img/ercole.png" alt="Snow" onclick="mostra();">
+    
+		<!-- The Modal -->
+		<div id="myModal" class="modale">
+
+			<!-- The Close Button -->
+			<span class="chiudi" onclick="sparisci();">&times;</span>
+	
+			<!-- Modal Content (The Image) -->
+			<img class="modale-content" src="img/ercole.png" id="img01">
+
+			<!-- Modal Caption (Image Text) -->
+			<div id="caption"></div>
+		</div>
+    
+		<div class="in_alto"><a href="#">STANZA DI GUIDO</a></div>
+	</div>
   </section>
+  
+  
+
+
+
+
+  
+  
+  
 
   <section class="sec3" id="chisiamo">
     <h1 class="titolo">CHI SIAMO</h1>
