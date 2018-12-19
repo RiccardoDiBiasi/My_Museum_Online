@@ -43,7 +43,7 @@ function signup() {
     username:document.getElementById("username").value,
     email:document.getElementById("email").value,
     password:document.getElementById("password").value,
-    
+    token:document.getElementById("token").value,
 };
 
     u[l] = p;
