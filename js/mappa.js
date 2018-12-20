@@ -23,10 +23,10 @@ function mostra5(){
   document.getElementById("myModal5").style.display = "block";
   document.getElementById("caption5").innerHTML = "STANZA DI ORFEO ED EURIDICE" + "<br>" + "<button class=\"button\" onclick=\"location.href = 'stanze/orfeo_euridice/orfeo.html'\"><span>Accedi alla stanza</span></button>";
 }
-// Get the <span> element that closes the modal
+
 var span = document.getElementsByClassName("chiudi")[0];
 
-// When the user clicks on <span> (x), close the modal
+
 function sparisci() { 
   document.getElementById("myModal").style.display = "none";
 }

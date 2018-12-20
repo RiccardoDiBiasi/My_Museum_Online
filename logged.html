@@ -13,6 +13,7 @@
   <script src="js/signUp.js"></script>
   <script src="js/logIn.js"></script>
   <script src="js/mappa.js"></script>
+  <script src="js/generToken.js"></script>
 
 
   <link href="https://fonts.googleapis.com/css?family=Charm|Montserrat" rel="stylesheet">
@@ -26,12 +27,25 @@
       <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
       <li><a href="#mappa"><i class="fa fa-fw fa-map"></i>Mappa</a></li>
       <li><a href="#chisiamo"><i class="fa fa-fw fa-user"></i>Chi Siamo</a></li>
-
+      <li><a href="#" onclick="return openForm();"><i class="fa fa-fw fa-plus"></i>Inviaci le tue opere</a></li>
 
     </ul>
 
 
   </nav>
+
+  <div class="form-popup" id="myForm">
+    <form action="upload.php" class="form-container" method="POST" enctype="multipart/form-data">
+      <h2 style="text-align: center;">CARICA IL TUO FILE</h2>
+      <p>Inviaci le immagini delle tue opere d'arte! Saranno prese in considerazione dallo staff e magari inserite in una nuova stanza!</p>
+  
+        <input type="file" name="file" class="btn">
+        <button type="submit" name="submit" class="btn">UPLOAD</button>
+  
+      
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
 
   <section class="sec1" id="home">
     <h1 class="ml2">MY MUSEUM ONLINE</h1>
@@ -86,15 +100,7 @@
                 document.getElementById("artista").innerHTML = 'Artista Preferito: ' + sessionStorage.getItem("artista")
               </script>
             </p>
-            <p id="token" style="color: white;">
-              <script>
-                if (sessionStorage.getItem("token") == "") {
-                  document.getElementById("token").innerHTML = 'Token: Non hai ancora generato un token!';
-                } else {
-                  document.getElementById("token").innerHTML = 'Token: ' + sessionStorage.getItem("token");
-                }
-              </script>
-            </p>
+            
             <button class="button" onclick="log_out();"><span>Log Out</span></button>
 
           </div>
