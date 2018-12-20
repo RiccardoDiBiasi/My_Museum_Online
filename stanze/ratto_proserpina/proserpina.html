@@ -1,0 +1,81 @@
+
+<html>
+
+<!DOCTYPE html>
+
+<div class="caption-container">
+	 <button class="button" onclick="location.href = '../../logged.html#mappa' "><span>Torna alla Mappa</span></button>
+<h2 style="text-align:center">Ratto di Proserpina</h2>
+</div>
+
+<body>
+
+
+<link rel="stylesheet" href="proserpina.css">
+
+<script src="proserpina.js"></script>
+
+ 
+<!-- Container for the image gallery -->
+<div class="container">
+	
+ 
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="Luca-Giordano.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="allori.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="rembrandt.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="schwarz.jpg"  style="width:100%">
+  </div>
+
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+		<script>currentSlide(1);</script>
+      <img class="demo cursor" src="Luca-Giordano.jpg" style="width:100%" onclick="currentSlide(1)" alt="“Il Ratto di Proserpina” - Luca Giordano 
+1683, Palazzo Medici, Firenze		278x216 cm">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="allori.jpg" style="width:100%" onclick="currentSlide(2)" alt="“Ratto di Proserpina” - Allori Alessandro
+1570, The Paul Getty Museum, Los Angeles		228x348 cm">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="rembrandt.jpg" style="width:100%" onclick="currentSlide(3)" alt="“Ratto di Proserpina” - Rembrandt
+1632, Staatliche Museen, Berlino		84,5x79,5 cm">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="schwarz.jpg" style="width:100%" onclick="currentSlide(4)" alt="“Ratto di Proserpina” - Christoph Schwarz
+1573, Fitzwilliam Museum, Cambridge	 66x95 cm">
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+</html>

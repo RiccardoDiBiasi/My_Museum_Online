@@ -1,0 +1,90 @@
+
+<html>
+
+<!DOCTYPE html>
+
+<div class="caption-container">
+	 <button class="button" onclick="location.href = '../../logged.html#mappa' "><span>Torna alla Mappa</span></button>
+<h2 style="text-align:center">Il mito di Ercole</h2>
+</div>
+
+<body>
+
+
+<link rel="stylesheet" href="ercole.css">
+
+<script src="ercole.js"></script>
+
+ 
+<!-- Container for the image gallery -->
+<div class="container">
+	
+ 
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+      <img src="rubens.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+      <img src="Annibale_Carracci.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+      <img src="piero_della_francesca.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+      <img src="zurbaran.jpg"  style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+      <img src="durer.jpg"  style="width:100%">
+  </div>
+
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+		<script>currentSlide(1);</script>
+      <img class="demo cursor" src="rubens.jpg" style="width:100%" onclick="currentSlide(1)" alt="“Ercole e Onfale” - Pieter Paul Rubens 
+1603, Museo del Louvre, Parigi		278x216 cm">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="Annibale_Carracci.jpg" style="width:100%" onclick="currentSlide(2)" alt="“Ercole al bivio” - Annibale Carracci
+1595-1596, Museo Nazionale di Capodimonte, Napoli		167x237 cm">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="piero_della_francesca.jpg" style="width:100%" onclick="currentSlide(3)" alt="“Ercole” - Piero della Francesca
+1465, Isabella Stewart Gardner Museum, Boston		151x126 cm">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="zurbaran.jpg" style="width:100%" onclick="currentSlide(4)" alt="“Ercole combatte l'idra di Lerna” - Francisco de Zurbaràn
+1634, Museo del Prado, Madrid	 302x323 cm">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="durer.jpg" style="width:100%" onclick="currentSlide(5)" alt="“Ercole uccide gli uccelli di Stinfalo” - Albrecht Durer
+1500, Germanisches Nationalmuseum, Norimberga		87x110 cm">
+    </div> 
+
+  </div>
+</div>
+
+</body>
+
+</html>
